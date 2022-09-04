@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+<%= render @restaurant %>
+<%= image_tag @restaurant.logo, width: 200 if @restaurant.logo.attached?%>
+<div>
+  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
+  <%= link_to "Back to restaurants", restaurants_path %>|
+  <%= link_to "restaurant dishes", dishes_path(restaurant_id:(@restaurant)) %>|
+  <%= button_to "Destroy this restaurant", @restaurant, method: :delete %>
+</div>

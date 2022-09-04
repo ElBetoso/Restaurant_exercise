@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+<h1>Restaurants</h1>
+
+<div id="restaurants">
+  <% @restaurants.each do |restaurant| %>
+    <%= render restaurant %>
+    <%= image_tag restaurant.logo, width: 100 if restaurant.logo.attached? %>
+    <p>
+      <%= link_to "Show this restaurant", restaurant %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New restaurant", new_restaurant_path %>
