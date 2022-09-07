@@ -6,7 +6,10 @@
     <%= dish.description %>
     <strong>Price:</strong>
     <%= dish.price %>
-
+</div>
+<%= image_tag dish.photo, width: 200 if dish.photo.attached?%>
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
     <span>
       <%= form_with(url: cart_add_path) do |f| %>
        <%= f.hidden_field :id, value: dish.id %>
@@ -14,4 +17,5 @@
        <%= f.submit "Add To Cart" %>
      <% end %>
  </span>
-   </div>
+</div>
+</div>

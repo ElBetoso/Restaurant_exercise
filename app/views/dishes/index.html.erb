@@ -1,15 +1,15 @@
 
 <p style="color: green"><%= notice %></p>
 <h1>Dishes</h1>
-<div>
-</div>
+
 <div id="dishes">
   <% @dishes.each do |dish| %>
     <%= render dish %>
-    <%= image_tag dish.photo, width: 100 if dish.photo.attached?%>
+    
     <p>
       <%= link_to "Show this dish", dish %>
     </p>
   <% end %>
 </div>
+
 <%= link_to "New dish", new_dish_path %>
