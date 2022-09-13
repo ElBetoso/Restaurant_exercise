@@ -20,7 +20,7 @@ class DishGroupsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create dish_group" do
     assert_difference("DishGroup.count") do
-      post dish_groups_url, params: { dish_group: { Name: @dish_group.Name } }
+      post dish_groups_url, params: { dish_group: { name: @dish_group.name } }
     end
 
     assert_redirected_to dish_group_url(DishGroup.last)
@@ -37,7 +37,7 @@ class DishGroupsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update dish_group" do
-    patch dish_group_url(@dish_group), params: { dish_group: { name: @dish_group.Name } }
+    patch dish_group_url(@dish_group), params: { dish_group: { name: @dish_group.name } }
     assert_redirected_to dish_group_url(@dish_group)
   end
 

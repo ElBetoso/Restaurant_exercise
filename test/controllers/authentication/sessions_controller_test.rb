@@ -13,12 +13,12 @@ class Authentication::SessionsControllerTest < ActionDispatch::IntegrationTest
   test "should login an user by email" do
     post sessions_url, params: { login: @user.email, password: 'testme' }
 
-    assert_redirected_to static_pages_url
+    assert_redirected_to restaurants_url
   end
 
   test "should login an user by username" do
     post sessions_url, params: { login: @user.username, password: 'testme' }
 
-    assert_redirected_to static_pages_url
+    assert_redirected_to restaurants_url
   end
 end

@@ -1,10 +1,10 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
-  address: MyString
-  phone: 1
+ name: Carl's Jr.
+ description: Carl's Jr. es una cadena de restaurante de comida rápida originada en los Estados Unidos y actualmente presente en el resto del mundo.
+ address: Av. Tecnologico 120 pad. 2, Col.Ejido, Ojocaliente, 20198 Aguascalientes
+ phone: 4499702185
 
 two:
   name: MyString
