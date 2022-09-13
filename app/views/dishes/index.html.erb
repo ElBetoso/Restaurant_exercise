@@ -4,12 +4,16 @@
 
 <div id="dishes">
   <% @dishes.each do |dish| %>
-    <%= render dish %>
-    
-    <p>
-      <%= link_to "Show this dish", dish %>
-    </p>
+<div align="center">
+  <div>
+    <strong>Name:</strong>
+    <%= dish.name %>
+    </div>
+    <%= link_to image_tag(dish.photo, alt: "Rails logo", width: "200"),
+dish %>
+    </div>
   <% end %>
 </div>
-
+<div align="center">
 <%= link_to "New dish", new_dish_path %>
+</div>

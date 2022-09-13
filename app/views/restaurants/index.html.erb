@@ -3,12 +3,16 @@
 
 <div id="restaurants">
   <% @restaurants.each do |restaurant| %>
-    <%= render restaurant %>
-    <%= image_tag restaurant.logo, width: 100 if restaurant.logo.attached? %>
-    <p>
-      <%= link_to "Show this restaurant", restaurant %>
-    </p>
+  <div align="center">
+    <div>
+      <strong>Name:</strong>
+      <%= restaurant.name %>
+      </div>
+      <%= link_to image_tag(restaurant.logo, alt: "logo", width: "200"),
+  restaurant %>
+      </div>
   <% end %>
 </div>
-
+<div align="center">
 <%= link_to "New restaurant", new_restaurant_path %>
+</div>
