@@ -14,10 +14,10 @@ class RestaurantsTest < ApplicationSystemTestCase
     visit restaurants_url
     click_on "New restaurant"
 
-    fill_in "Address", with: @restaurant.Address
-    fill_in "Description", with: @restaurant.Description
-    fill_in "Name", with: @restaurant.Name
-    fill_in "Phone", with: @restaurant.Phone
+    fill_in "Address", with: @restaurant.address
+    fill_in "Description", with: @restaurant.description
+    fill_in "Name", with: @restaurant.name
+    fill_in "Phone", with: @restaurant.phone
     click_on "Create Restaurant"
 
     assert_text "Restaurant was successfully created"
@@ -28,10 +28,10 @@ class RestaurantsTest < ApplicationSystemTestCase
     visit restaurant_url(@restaurant)
     click_on "Edit this restaurant", match: :first
 
-    fill_in "Address", with: @restaurant.Address
-    fill_in "Description", with: @restaurant.Description
-    fill_in "Name", with: @restaurant.Name
-    fill_in "Phone", with: @restaurant.Phone
+    fill_in "Address", with: @restaurant.address
+    fill_in "Description", with: @restaurant.description
+    fill_in "Name", with: @restaurant.name
+    fill_in "Phone", with: @restaurant.phone
     click_on "Update Restaurant"
 
     assert_text "Restaurant was successfully updated"

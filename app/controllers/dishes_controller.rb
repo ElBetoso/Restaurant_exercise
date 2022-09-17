@@ -4,15 +4,15 @@ class DishesController < ApplicationController
 
   # GET /dishes or /dishes.json
   def index
-    @dishes = Dish.all.load_async
+    @dish = Dish.all.load_async
     @dish_group = DishGroup.all.order(name: :asc).load_async
     @restaurant = Restaurant.all.order(name: :asc).load_async
     @dishes = Dish.with_attached_photo.order(created_at: :desc).load_async
     if params[:dish_group_id]
-      @dishes = @dishes.where(dish_group_id: params[:dish_group_id])
+      @dish = @dish.where(dish_group_id: params[:dish_group_id])
     end
     if params[:restaurant_id]
-      @dishes = @dishes.where(restaurant_id: params[:restaurant_id])
+      @dish = @dish.where(restaurant_id: params[:restaurant_id])
     end
   end
 

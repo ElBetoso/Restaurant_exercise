@@ -14,7 +14,7 @@ class DishGroupsTest < ApplicationSystemTestCase
     visit dish_groups_url
     click_on "New dish group"
 
-    fill_in "Name", with: @dish_group.Name
+    fill_in "Name", with: @dish_group.name
     click_on "Create Dish group"
 
     assert_text "Dish group was successfully created"
@@ -25,7 +25,7 @@ class DishGroupsTest < ApplicationSystemTestCase
     visit dish_group_url(@dish_group)
     click_on "Edit this dish group", match: :first
 
-    fill_in "Name", with: @dish_group.Name
+    fill_in "Name", with: @dish_group.name
     click_on "Update Dish group"
 
     assert_text "Dish group was successfully updated"
