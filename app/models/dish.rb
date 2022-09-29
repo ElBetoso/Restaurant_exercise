@@ -3,8 +3,7 @@ class Dish < ApplicationRecord
 
   belongs_to :dish_group
   belongs_to :restaurant
-  has_many :order_items
-  has_many :orderables
+  has_many :orderables, dependent: :destroy
   has_many :carts, through: :orderables
   validates :name, :price, presence: true
 end
