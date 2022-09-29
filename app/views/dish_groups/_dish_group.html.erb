@@ -1,7 +1,7 @@
-<div id="<%= dom_id dish_group %>">
-    <%= dish_group.name %>
-    <%= link_to "edit", edit_dish_group_path(dish_group) %>
-    <%= link_to "delete", dish_group_path(dish_group), data:
-    {turbo_method: :delete,
+  <div id="<%= dom_id dish_group %>">
+     <%= dish_group.name %>
+     <%= link_to "edit", edit_dish_group_path(dish_group) %>
+     <%= link_to "delete", dish_group_path(dish_group), data:
+     {turbo_method: :delete,
     turbo_confirm: "common.confirm"} %>
-</div>
+  </div>

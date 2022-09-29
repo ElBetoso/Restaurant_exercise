@@ -1,10 +1,10 @@
-<p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= notice %></p>
 
-<%= render @dish_group %>
+  <%= render @dish_group %>
 
-<div>
-  <%= link_to "Edit this dish group", edit_dish_group_path(@dish_group) %> |
-  <%= link_to "Back to dish groups", dish_group_path %>
+  <div>
+   <%= link_to "Edit this dish group", edit_dish_group_path(@dish_group) %> |
+   <%= link_to "Back to dish groups", dish_group_path %>
 
-  <%= button_to "Destroy this dish group", @dish_group, method: :delete %>
-</div>
+   <%= button_to "Destroy this dish group", @dish_group, method: :delete %>
+  </div>

@@ -1,3 +1,3 @@
 class DishGroup < ApplicationRecord
-has_many :dish
+  has_many :dish
 end

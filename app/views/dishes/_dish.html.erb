@@ -1,21 +1,21 @@
 
-<div id="<%= dom_id dish %>" >
+  <div id="<%= dom_id dish %>" >
     <strong>Name:</strong>
     <%= dish.name %>
     <strong>Description:</strong>
     <%= dish.description %>
     <strong>Price:</strong>
     <%= dish.price %>
-</div>
-<%= image_tag dish.photo, width: 200 if dish.photo.attached?%>
-<div class="row">
-<div class="col-md-6 col-md-offset-3">
+  </div>
+  <%= image_tag dish.photo, width: 200 if dish.photo.attached?%>
+  <div class="row">
+   <div class="col-md-6 col-md-offset-3">
     <span>
       <%= form_with(url: cart_add_path) do |f| %>
        <%= f.hidden_field :id, value: dish.id %>
        <%= f.number_field :quantity, value: 0, min: 1 %>
        <%= f.submit "Add To Cart" %>
      <% end %>
- </span>
-</div>
-</div>
+    </span>
+   </div>
+  </div>

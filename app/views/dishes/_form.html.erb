@@ -13,38 +13,38 @@
   <div class="row">
   <div class="col-md-6 col-md-offset-3">
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+     <%= form.label :name, style: "display: block" %>
+     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+     <%= form.label :description, style: "display: block" %>
+     <%= form.text_area :description %>
   </div>
 
   <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.text_field :price %>
+     <%= form.label :price, style: "display: block" %>
+     <%= form.text_field :price %>
   </div>
 
   <div>
-    <%= form.label :dish_group_id %>
-    <%= form.collection_select :dish_group_id, DishGroup.all.order(name: :asc), :id, :name %>
+     <%= form.label :dish_group_id %>
+     <%= form.collection_select :dish_group_id, DishGroup.all.order(name: :asc), :id, :name %>
   </div>
 
   <div>
-    <%= form.label :restaurant_id %>
-    <%= form.collection_select :restaurant_id, Restaurant.all.order(name: :asc), :id, :name %>
+     <%= form.label :restaurant_id %>
+     <%= form.collection_select :restaurant_id, Restaurant.all.order(name: :asc), :id, :name %>
   </div>
 
   <div>
-    <%= form.label :photo %>
-    <%= form.file_field :photo %>
-    </div>
+     <%= form.label :photo %>
+     <%= form.file_field :photo %>
+  </div>
 
   <div>
-    <%= form.submit %>
+     <%= form.submit %>
   </div>
 <% end %>
-</div>
-</div>
+   </div>
+  </div>

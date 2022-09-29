@@ -1,19 +1,24 @@
 
-<p style="color: green"><%= notice %></p>
-<h1>Dishes</h1>
+  <p style="color: green"><%= notice %></p>
+  <h1>Dishes</h1>
 
-<div id="dishes">
-  <% @dish.each do |dish| %>
-<div align="center">
-  <div>
-    <strong>Name:</strong>
-    <%= dish.name %>
-    </div>
-    <%= link_to image_tag(dish.photo, alt: "Rails logo", width: "200"),
-dish %>
-    </div>
-  <% end %>
-</div>
-<div align="center">
-<%= link_to "New dish", new_dish_path %>
-</div>
+  <div id="dishes">
+   <% @dish.each do |dish| %>
+   <div align="center">
+     <div>
+       <strong>Name:</strong>
+       <%= dish.name %>
+     </div>
+     <% if dish.photo.present? %>
+      <%= link_to image_tag(dish.photo, alt: "Dish Photo", width: "200"),
+      dish %>
+    <% else %>
+      <%= link_to image_tag("default.png", alt: "Dish Photo", width: "200"),
+      dish %>
+    <% end %>
+   </div>
+   <% end %>
+  </div>
+  <div align="center">
+   <%= link_to "New dish", new_dish_path %>
+  </div>

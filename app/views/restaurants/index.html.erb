@@ -1,18 +1,23 @@
 <p style="color: green"><%= notice %></p>
 <h1>Restaurants</h1>
 
-<div id="restaurants">
-  <% @restaurant.each do |restaurant| %>
-  <div align="center">
+  <div id="restaurants">
+   <% @restaurant.each do |restaurant| %>
+   <div align="center">
     <div>
       <strong>Name:</strong>
       <%= restaurant.name %>
       </div>
-      <%= link_to image_tag(restaurant.logo, alt: "logo", width: "200"),
-  restaurant %>
+      <% if restaurant.logo.present? %>
+        <%= link_to image_tag(restaurant.logo, alt: "logo", width: "200"),
+        restaurant %>
+      <% else %>
+        <%= link_to image_tag("default.png", alt: "logo", width: "200"),
+        restaurant %>
+      <% end %>
       </div>
-  <% end %>
-</div>
-<div align="center">
-<%= link_to "New restaurant", new_restaurant_path %>
-</div>
+   <% end %>
+  </div>
+  <div align="center">
+   <%= link_to "New restaurant", new_restaurant_path %>
+  </div>

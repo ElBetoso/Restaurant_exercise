@@ -1,19 +1,19 @@
 <%= form_with(url: sessions_path) do |form| %>
-<div class="row">
-<div class="col-md-6 col-md-offset-3">
-  <div>
-    <%= form.label :login %>
-    <%= form.text_field :login %>
-  </div>
+  <div class="row">
+  <div class="col-md-6 col-md-offset-3">
+   <div>
+     <%= form.label :login %>
+     <%= form.text_field :login %>
+   </div>
 
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
+   <div>
+     <%= form.label :password %>
+     <%= form.password_field :password %>
+   </div>
 
-  <div>
-    <%= form.submit %>
+   <div>
+     <%= form.submit %>
+   </div>
+     <% end %>
   </div>
-<% end %>
-</div>
-</div>
+  </div>

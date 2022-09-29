@@ -1,5 +1,5 @@
 class Dish < ApplicationRecord
-has_one_attached :photo
+  has_one_attached :photo
 
   belongs_to :dish_group
   belongs_to :restaurant

@@ -1,9 +1,9 @@
-<p style="color: green"><%= notice %></p>
-<%= render @dish %>
+  <p style="color: green"><%= notice %></p>
+  <%= render @dish %>
 
-<div>
-  <%= link_to "Edit this dish", edit_dish_path(@dish) %> |
-  <%= link_to "Back to dishes", dishes_path(restaurant_id:(@restaurant)) %>
+  <div>
+   <%= link_to "Edit this dish", edit_dish_path(@dish) %> |
+   <%= link_to "Back to dishes", dishes_path(restaurant_id:(@restaurant)) %>
 
-  <%= button_to "Destroy this dish", @dish, method: :delete %>
-</div>
+   <%= button_to "Destroy this dish", @dish, method: :delete %>
+  </div>
