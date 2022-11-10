@@ -3,7 +3,8 @@
 To get started with the app, clone the repo and then install the needed gems:
 ```
 bundle install
-
+```
+```
 ./bin/rails tailwindcss:install
 ```
 Next, migrate the database:
