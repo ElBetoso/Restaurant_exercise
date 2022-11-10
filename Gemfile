@@ -77,5 +77,3 @@ gem "pg_search", "~> 2.3"
 gem "pagy", "~> 5.10"
 
 gem "tailwindcss-rails", "~> 2.0"
-
-gem "bootstrap-sass", "~> 3.4"
