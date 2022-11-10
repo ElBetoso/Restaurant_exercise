@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post "cart/remove"
 
   resources :dishes
-  resources :dish_groups, except: :show
+  resources :dish_groups
   resources :restaurants
 
   namespace :authentication, path: "", as: "" do
