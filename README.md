@@ -2,13 +2,15 @@
 ## Getting started
 To get started with the app, clone the repo and then install the needed gems:
 ```
-$ bundle install --without production
+bundle install
+
+./bin/rails tailwindcss:install
 ```
 Next, migrate the database:
 ```
-$ rails db:migrate
+rails db:migrate
 ```
 If the test suite passes, you'll be ready to run the app in a local server:
 ```
-$ rails server
+rails server
 ```
