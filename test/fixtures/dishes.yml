@@ -4,8 +4,12 @@ one:
   name: Double Western Bacon Cheeseburger
   description: Dos piezas de carne 100% de res asada a la parrilla, salsa BBQ, rebanadas de tocino, queso americano y aros de cebolla empanizados.
   price: 129.0
+  dish_group: Fast Food
+  restaurant: Carl's Jr.
 
 two:
   name: MyString
   description: MyText
   price: 1.5
+  dish_group: Fast Food
+  restaurant: Carl's Jr.
